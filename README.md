@@ -129,9 +129,24 @@ settings.json
     "editor.renderWhitespace": "all",
     "editor.tabSize": 8
 }
-``` 
+```
+
+keybindings.json
+```json
+[
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.showNextWindowTab"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.showPreviousWindowTab"
+    }
+]
+```
 
 Extension starter pack:
+```
 - editorconfig
 - gitlens
 - go
@@ -140,4 +155,4 @@ Extension starter pack:
 - vim
 - xml
 - yaml
-  
+```
