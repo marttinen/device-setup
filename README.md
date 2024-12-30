@@ -95,9 +95,10 @@ export PATH="$HOME/go/bin:$HOME/.krew/bin:$PATH"
 # Source: https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/directories.zsh
 alias -g ...="../.."
 alias -g ....="../../.."
-alias l="ls -lah"
-alias ll="ls -lh"
-alias la="ls -lAh"
+alias ls="ls -G"
+alias la="ls -AG"
+alias l="ls -lhG"
+alias ll="ls -lhAG"
 
 alias zshrc="nvim ~/.zshrc && source ~/.zshrc"
 alias vi="nvim"
