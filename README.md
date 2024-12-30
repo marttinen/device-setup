@@ -116,5 +116,28 @@ compdef k=kubectl
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ```
 
+## VSCode
 
+settings.json
+```json
+{
+    "workbench.startupEditor": "none",
+    "workbench.activityBar.location": "top",
+    "editor.fontSize": 15,
+    "files.autoSave": "onWindowChange",
+    "editor.fontFamily": "'UbuntuMono Nerd Font', monospace",
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 8
+}
+``` 
 
+Extension starter pack:
+- editorconfig
+- gitlens
+- go
+- tailwind
+- templ-vscode
+- vim
+- xml
+- yaml
+  
