@@ -137,10 +137,12 @@ keybindings.json
 ```json
 [
     {
+        // vim mode: gt
         "key": "ctrl+tab",
         "command": "workbench.action.showNextWindowTab"
     },
     {
+        // vim mode: gT
         "key": "ctrl+shift+tab",
         "command": "workbench.action.showPreviousWindowTab"
     }
