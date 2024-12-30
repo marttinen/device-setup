@@ -3,6 +3,8 @@
 homebrew setup:
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' > .zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install --cask google-chrome ghostty visual-studio-code
 brew install neovim ripgrep fzf golang font-ubuntu-{,mono}-nerd-font powerlevel10k kubectl krew
 kubectl krew update && kubectl krew install ctx ns
