@@ -4,7 +4,8 @@ homebrew setup:
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install --cask google-chrome ghostty visual-studio-code
-brew install neovim ripgrep fzf golang font-ubuntu-{,mono}-nerd-font powerlevel10k
+brew install neovim ripgrep fzf golang font-ubuntu-{,mono}-nerd-font powerlevel10k kubectl krew
+kubectl krew update && kubectl krew install ctx ns
 ```
 
 neovim setup:
@@ -85,21 +86,29 @@ autoload -U +X bashcompinit && bashcompinit
 
 export HISTSIZE=10000
 export SAVEHIST=10000
+export LANG=en_US.UTF-8
 export EDITOR="nvim"
-export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/go/bin:$HOME/.krew/bin:$PATH"
 
 # Source: https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/directories.zsh
-alias -g ...='../..'
-alias -g ....='../../..'
-alias l='ls -lah'
-alias ll='ls -lh'
-alias la='ls -lAh'
+alias -g ...="../.."
+alias -g ....="../../.."
+alias l="ls -lah"
+alias ll="ls -lh"
+alias la="ls -lAh"
 
 alias zshrc="nvim ~/.zshrc && source ~/.zshrc"
-alias vi=nvim
-alias vim=nvim
-alias k=kubectl
-alias g=git
+alias vi="nvim"
+alias vim="nvim"
+alias tf="terraform"
+alias k="kubectl"
+alias kc="kubectl ctx"
+alias py="python3"
+alias alpine="docker run --rm -it -v ${PWD}:/work alpine"
+alias knginx="kubectl run -it --rm nginx --image nginx -- bash"
+
+compdef g=git
+compdef k=kubectl
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
