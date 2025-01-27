@@ -129,7 +129,15 @@ settings.json
     "files.autoSave": "onWindowChange",
     "editor.fontFamily": "'UbuntuMono Nerd Font', monospace",
     "editor.renderWhitespace": "all",
-    "editor.tabSize": 8
+    "editor.tabSize": 8,
+    "vscode_custom_css.imports": ["file:///Users/max/Documents/vscode.css"], 
+}
+```
+
+/Users/max/Documents/vscode.css
+```css
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.right>.details-label {
+    display: inline !important
 }
 ```
 
@@ -159,4 +167,5 @@ Extension starter pack:
 - vim
 - xml
 - yaml
+- https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css
 ```
